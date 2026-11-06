@@ -1,0 +1,6 @@
+flowchart LR
+    Browser[Public browser] <-->|HTTP :8080| IP[EC2 public IP]
+    IP <--> SG[Security group: 8080 public, 22 from your IP]
+    SG <--> EC2[Amazon Linux 2023 EC2, t3.micro]
+    EC2 <--> Go[Go app managed by systemd]
+    Go <-->|insert and query| SQLite[(SQLite on encrypted EBS root volume)]

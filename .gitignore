@@ -1,0 +1,20 @@
+# Local application data
+data/
+*.db
+*.db-shm
+*.db-wal
+
+# Terraform state, plans, and local settings
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.auto.tfvars
+terraform.tfvars
+crash.log
+
+# Build output and local secrets
+/mango-cats
+*.pem
+*.key
+.DS_Store
